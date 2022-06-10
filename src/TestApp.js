@@ -2,8 +2,8 @@ import {useState} from "react";
 
 const TestApp = () => {
     const [values, setValues] = useState({first:"",second:"",sum:""})
-    const [first,setFirst]=useState('')
-    const [second,setSecond]=useState('')
+    const first = ''
+    const second = ''
     const [sum,setSum]=useState('')
 const onChange=(e)=> {
     let name = e.target.name;
@@ -23,17 +23,16 @@ const onChange=(e)=> {
     }
     return ( <form>
         <div >
-          First
-            <input type="text" onChange={onChange} defaultValue={first} name='first' id="first" type="number"/>
+            <h3>First</h3>
+          
+            <input onChange={onChange} defaultValue={first} name='first' id="first" type="number"/>
 
-            Second
-            <input type="text" onChange={onChange} defaultValue={second} name="second"  id="second" type="number"/>
+            <h3>Second</h3>
 
+            <input onChange={onChange} defaultValue={second} name="second"  id="second" type="number"/>
 
-            <h1> total
-                <input onChange={onChange} defaultValue={sum} id="sum" name="sum" type="number"/></h1>
-
-
+            <h1>{sum}</h1>
+            
         </div>
     </form> );
 }
